@@ -40,7 +40,8 @@
 
 <script setup>
     import GuestLayout from '@/Layouts/GuestLayout.vue';
-    import DragDropToolbox from '@/Components/DragDropToolbox.vue';
+    import DragDropToolbox from '@/Components/ComponentDragDropToolbox/DragDropToolbox.vue';
+    import ComponentBox from '@/Components/ComponentDragDropToolbox/ComponentBox.vue';
 </script>
 
 <template>
@@ -49,7 +50,9 @@
             width="640"
             height="480"
             id="customerBox"
-        ></DragDropToolbox>
+        >
+            <ComponentBox></ComponentBox>
+        </DragDropToolbox>
     </GuestLayout>
 </template>
         <!--
