@@ -1,11 +1,12 @@
 <script setup>
-    import { onMounted } from 'vue';
+    import { onMounted, useSlots } from 'vue';
 
     const props = defineProps(["width", "height", "id"]);
 
     onMounted(() => {
         const component = document.getElementById(props.id);
 
+        /* prepare canvas */
         const placeholderCanvas = component.querySelector(".placeholderCanvas");
         const canvas = placeholderCanvas.querySelector("canvas");
 
@@ -14,6 +15,14 @@
 
         canvas.width = props.width;
         canvas.height = props.height;
+
+        /* go though slots */
+        const slots = useSlots();
+
+        slots.default().forEach(element => {
+            console.log(element.innerHTML)
+            
+        });
     });
 </script>
 
