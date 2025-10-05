@@ -2,7 +2,7 @@
     <div class="w-full p-5 h-auto flex items-center justify-between shadow-md">
         <div class="flex items-center gap-3">
             <FileChartColumnIncreasing></FileChartColumnIncreasing>
-            <RouterLink to="/">UML Diagramas</RouterLink>
+            <RouterLink to="/" v-if="!smallScreen">UML Diagramas</RouterLink>
         </div>
         <div class="flex items-center gap-5">
             <RouterLink active-class="border-b-1" to="/">Māja</RouterLink>
@@ -15,6 +15,27 @@
 <script setup>
 import { FileChartColumnIncreasing } from 'lucide-vue-next';
 import { useRoute } from 'vue-router';
+import { ref, watch, onMounted } from 'vue';
+import { useWindowSize } from '@vueuse/core'
+
+const { width, height } = useWindowSize();
+const smallScreen = ref(false);
+
+onMounted(() => {
+    if(width.value <= 868) {
+        smallScreen.value = true;
+    } else {
+        smallScreen.value = false;
+    }
+});
+
+watch(width, (newWidth) => {
+    if(newWidth <= 868) {
+        smallScreen.value = true;
+    } else {
+        smallScreen.value = false;
+    }
+});
 
 const route = useRoute();
 </script>

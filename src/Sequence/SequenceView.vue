@@ -1,13 +1,19 @@
 <template>
 <GuestLayout>
-    <div class="flex w-full p-5">
-        <div class="flex mt-5 flex-col w-auto min-w-40 pr-5 p-2 border-r-1 h-[84vh] gap-3 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 overflow-y-auto">
-            <a href="#sakums" :class="activeA == 'sakums' ? 'text-green-500' : ''" @click="activeA = 'sakums'">Sākums</a>
-            <a href="#apraksts" :class="activeA == 'apraksts' ? 'text-green-500' : ''" @click="activeA = 'apraksts'">Apraksts</a>
-            <a href="#struktura" :class="activeA == 'struktura' ? 'text-green-500' : ''" @click="activeA = 'struktura'">Struktūra</a>
+    <div class="flex w-full p-5 scroll-smooth" :class="smallScreen ? 'flex-col h-auto' : ''">
+        <div class="flex mt-5 flex-col w-auto min-w-40 pr-5 p-2 border-r-1 h-[84vh] gap-3 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 overflow-y-auto" :class="smallScreen ? 'h-auto pl-7' : ''">
+            <div v-if="!testStart" class="flex flex-col gap-3" :class="smallScreen ? 'flex-row overflow-x-auto w-full' : ''">
+                <a href="#sakums" :class="activeA == 'sakums' ? 'text-green-500' : ''" @click="activeA = 'sakums'">Sākums</a>
+                <a href="#struktura" :class="activeA == 'struktura' ? 'text-green-500' : ''" @click="activeA = 'struktura'">Struktūra</a>
+                <a href="#test" :class="activeA == 'test' ? 'text-green-500' : ''" @click="activeA = 'test'">Tests</a>
+            </div>
+            <div v-else class="flex flex-col gap-3" :class="smallScreen ? 'flex-row overflow-x-auto w-full' : ''">
+                <a class="text-xl" href="#test" @click="activeA = 'sakums'; testStart = false">Atpakaļ</a>
+            </div>
         </div>
 
-        <div class="flex-3 p-2 ml-5 mt-10 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 overflow-y-auto h-[80vh]">
+        <div class="flex-3 p-2 ml-5 mt-10 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 overflow-y-auto h-[80vh] scroll-smooth">
+            <div v-if="!testStart">
             <h1 class="text-3xl font-semibold" id="sakums">Sekvenču UML</h1>
 
             <p class="mt-3">
@@ -22,7 +28,7 @@
 
                 <div class="pl-5 border-b-1 border-t-1 pt-5">
                     <h3 class="text-xl">Actor (Lietotājs)</h3>
-                    <div class="flex gap-5 mb-3 mt-5  justify-start items-start">
+                    <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
                         <div class="w-50">
                             <img class="" src="@/assets/actor.png"></img>
                         </div>
@@ -32,7 +38,7 @@
 
                 <div class="pl-5 border-b-1 border-t-1 pt-5">
                     <h3 class="text-xl">Lifelines (Dziveslīnijas)</h3>
-                    <div class="flex gap-5 mb-3 mt-5  justify-start items-start">
+                    <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
                         <div class="w-50">
                             <img class="" src="@/assets/lifelines2.png"></img>
                         </div>
@@ -42,7 +48,7 @@
 
                 <div class="pl-5 border-b-1 border-t-1 pt-5">
                     <h3 class="text-xl">Messages (Ziņojumi)</h3>
-                    <div class="flex gap-5 mb-3 mt-5  justify-start items-start">
+                    <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
                         <div class="w-80">
                             <img class="" src="@/assets/messages.png"></img>
                         </div>
@@ -52,7 +58,7 @@
 
                 <div class="pl-5 border-b-1 border-t-1 pt-5">
                     <h3 class="text-xl">Synchronous messages (Sinhronie ziņojumi)</h3>
-                    <div class="flex gap-5 mb-3 mt-5  justify-start items-start">
+                    <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
                         <div class="w-140">
                             <img class="" src="@/assets/synchro.png"></img>
                         </div>
@@ -62,7 +68,7 @@
 
                 <div class="pl-5 border-b-1 border-t-1 pt-5">
                     <h3 class="text-xl">Asynchronous messages (Asinhronie ziņojumi)</h3>
-                    <div class="flex gap-5 mb-3 mt-5  justify-start items-start">
+                    <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
                         <div class="w-90">
                             <img class="" src="@/assets/async.png"></img>
                         </div>
@@ -71,7 +77,18 @@
                 </div>
             </div>
 
+            <div id="test" class="mt-5 border-1 p-5 rounded shadow-md">
+                <h2>Tests</h2>
+                <p class="mt-3">Šajā sadaļā būs tests par sekvenču UML diagrammām.</p>
+                <button @click="testStart = true" class="mt-3 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 cursor-pointer">Sākt</button>
+            </div>
+
+            </div>
+
+            <SequenceTest v-else></SequenceTest>
+
         </div>
+
 
     </div>
 </GuestLayout>
@@ -80,7 +97,33 @@
 
 <script setup>
 import GuestLayout from '@/Layouts/GuestLayout.vue';
-import { ref } from 'vue';
+import { onMounted, ref, watch } from 'vue';
+import { useWindowSize } from '@vueuse/core'
+import SequenceTest from '@/Sequence/SequenceTest.vue';
+
+const { width, height } = useWindowSize();
+const smallScreen = ref(false);
+
+const testStart = ref(false);
+
+onMounted(() => {
+    if(width.value <= 868) {
+        smallScreen.value = true;
+    } else {
+        smallScreen.value = false;
+    }
+});
+
+watch(width, (newWidth) => {
+    if(newWidth <= 868) {
+        smallScreen.value = true;
+    } else {
+        smallScreen.value = false;
+    }
+});
 
 const activeA = ref('sakums');
 </script>
+
+<style>
+</style>
