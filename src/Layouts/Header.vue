@@ -5,7 +5,7 @@
             <RouterLink to="/" v-if="!smallScreen">UML Diagramas</RouterLink>
         </div>
         <div class="flex items-center gap-5">
-            <RouterLink active-class="border-b-1" to="/">Māja</RouterLink>
+            <RouterLink active-class="border-b-1" to="/">Sākums</RouterLink>
             <RouterLink active-class="border-b-1" to="/components" class="ml-5">Komponenšu UML</RouterLink>
             <RouterLink active-class="border-b-1" to="/sequence" class="ml-5">Sekvenču UML</RouterLink>
         </div>

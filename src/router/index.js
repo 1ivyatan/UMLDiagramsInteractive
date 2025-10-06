@@ -12,6 +12,11 @@ const router = createRouter({
       path: '/sequence',
       name: 'sequence',
       component: () => import('../Sequence/SequenceView.vue')
+    },
+    {
+      path: '/components',
+      name: 'components',
+      component: () => import('../Components/ComponentsView.vue')
     }
   ],
 })
