@@ -2,7 +2,7 @@
 import { ref, computed, watch } from "vue";
 
 const questions = ref([
-  { type: 'choice', text: "Interfeisā ko nozīmē pusapļi?", options: ["Komponentes nepieciešamais interfeiss darbībai", "Komponentes interfeiss izmantošanai citās komponentēs", "Message"], correct: 0 },
+  { type: 'choice', text: "Interfeisā ko nozīmē pusapļi?", options: ["Komponentes nepieciešamais interfeiss darbībai", "Komponentes interfeiss izmantošanai citās komponentēs"], correct: 0 },
    { type: 'choice', text: "Video koplietošanas vietnē kas varētu būt video straumētājs?", options: ["Interfeiss", "Ports", "Komponente"], correct: 2 }
 ]);
 
