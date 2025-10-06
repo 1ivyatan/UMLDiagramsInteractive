@@ -68,7 +68,7 @@
 
             </div>
 
-            <SequenceTest v-else></SequenceTest>
+            <ComponentsTest v-else></ComponentsTest>
 
         </div>
 
@@ -82,7 +82,7 @@
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 import { onMounted, ref, watch } from 'vue';
 import { useWindowSize } from '@vueuse/core'
-import SequenceTest from '@/Sequence/SequenceTest.vue';
+import ComponentsTest from '@/Components/ComponentsTest.vue';
 
 const { width, height } = useWindowSize();
 const smallScreen = ref(false);
