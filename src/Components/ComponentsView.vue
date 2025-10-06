@@ -58,6 +58,18 @@
                     </div>
                 </div>
 
+                <div class="pl-5 border-b-1 border-t-1 pt-5">
+                    <h3 class="text-xl">Artifakti</h3>
+                    <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
+                        <div class="w-80">
+                            <img class="" src="@/assets/artifact.png"></img>
+                        </div>
+                        <p class="w-auto">
+                            Norāda failus vai datus, kuri ir palaisti mezglos.
+                        </p>
+                    </div>
+                </div>
+
             </div>
 
             <div id="test" class="mt-5 border-1 p-5 rounded shadow-md">
