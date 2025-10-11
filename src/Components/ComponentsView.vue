@@ -29,10 +29,22 @@
                 <div class="pl-5 border-b-1 border-t-1 pt-5">
                     <h3 class="text-xl">Komponente</h3>
                     <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
-                        <div class="w-200">
+                        <div class="w-100">
                             <img class="" src="@/assets/component.png"></img>
                         </div>
                         <p class="w-auto">Norāda sistēmas modulārās daļas, kurā atrodas funkcionalitātes. Komponentes var nūt programmatūras klases, klašu kopas vai apakšsistēmas.</p>
+                    </div>
+                </div>
+
+                <div class="pl-5 border-b-1 border-t-1 pt-5">
+                    <h3 class="text-xl">Artifakti</h3>
+                    <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
+                        <div class="w-100">
+                            <img class="" src="@/assets/artifact.png"></img>
+                        </div>
+                        <p class="w-auto">
+                            Norāda failus vai datus, kuri tiks izmantoti mezglos, piemēram, komponentēs. Artifakti var norādīt mezglu sastāvu un kā faili un dati saista šos mezglus, piemēram, komponentes.
+                        </p>
                     </div>
                 </div>
 
@@ -42,30 +54,50 @@
                         <div class="w-50">
                             <img class="" src="@/assets/interface.png"></img>
                         </div>
-                        <p class="w-auto">Norāda darbības, kurā komponente piedāvā vai ir nepieciešama. Rinķi norāda interfeisus un pusapļi norāda nepieciešamību savienojumam ar interfeisu.</p>
+                        <p class="w-auto">Norāda darbības, kurā komponente piedāvā vai ir nepieciešama. Rinķi norāda interfeisus un pusapļi norāda nepieciešamību savienojumam ar interfeisu. Piemēram, pasūtījuma komponenti var piesaistīt ar konta komponenti, taču strukturāli neatkarīgas. </p>
+                    </div>
+                </div>
+
+                <div class="pl-5 border-b-1 border-t-1 pt-5">
+                    <h3 class="text-xl">Asociācijas saikne</h3>
+                    <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
+                        <div class="w-50">
+                            <img class="" src="@/assets/relationship-association.png"></img>
+                        </div>
+                        <p class="w-auto">Norāda, ka mezgls, piemēram, komponente vai artifakts, ir saistīta ar norādīto mezglu. Piemēram, grāmatas komponente ir asociēta ar bibliotēkas komponenti, kuras ir cieši saistītas un grāmatas komponente ir pakļauta bibliotēkas komponenti.</p>
+                    </div>
+                </div>
+
+                <div class="pl-5 border-b-1 border-t-1 pt-5">
+                    <h3 class="text-xl">Saikne</h3>
+                    <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
+                        <div class="w-50">
+                            <img class="" src="@/assets/relationship-dependency.png"></img>
+                        </div>
+                        <p class="w-auto">Norāda, ka mezgls, piemēram, komponente vai artifakts, ir atkarīga no kādas komponentes. Piemēram, grāmatas komponente ir atkarīga no personas komponentes, piemēram, grāmatas komponentei norādot īpašnieku.</p>
                     </div>
                 </div>
 
                 <div class="pl-5 border-b-1 border-t-1 pt-5">
                     <h3 class="text-xl">Ports</h3>
                     <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
-                        <div class="w-80">
+                        <div class="w-30">
                             <img class="" src="@/assets/port.png"></img>
                         </div>
                         <p class="w-auto">
-                            Norāda punktu, kurā komponentei interfeisus piedāvā vai ir nepieciešama.
+                            Izceļ mijiedarbības punktus, kurās tiek izmantoti interfeisi.
                         </p>
                     </div>
                 </div>
 
                 <div class="pl-5 border-b-1 border-t-1 pt-5">
-                    <h3 class="text-xl">Artifakti</h3>
+                    <h3 class="text-xl">Mezgls</h3>
                     <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
-                        <div class="w-80">
-                            <img class="" src="@/assets/artifact.png"></img>
+                        <div class="w-150">
+                            <img class="" src="@/assets/node.png"></img>
                         </div>
                         <p class="w-auto">
-                            Norāda failus vai datus, kuri ir palaisti mezglos.
+                            Norāda vidi, kurā komponentes atrodas un tiek palaistas norādītā vidē un tās infrastruktūrā. Piemēram, kā tīmekļa serveris strukturā klienta un aizmugures puse tiek strukturēta, kādas komponentes atrodas nosacītās pusēs, piemēram, datubāzes un datu apstrādes komponente aizmugurē un lietotāja interfeisa komponente klienta pusē.
                         </p>
                     </div>
                 </div>
