@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="pl-5 border-b-1 border-t-1 pt-5">
-                    <h3 class="text-xl">Komponente</h3>
+                    <h3 class="text-xl">Componente (komponente)</h3>
                     <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
                         <div class="w-100">
                             <img class="" src="@/assets/component.png"></img>
@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="pl-5 border-b-1 border-t-1 pt-5">
-                    <h3 class="text-xl">Artifakti</h3>
+                    <h3 class="text-xl">Artifact (artifakti)</h3>
                     <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
                         <div class="w-100">
                             <img class="" src="@/assets/artifact.png"></img>
@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="pl-5 border-b-1 border-t-1 pt-5">
-                    <h3 class="text-xl">Interfeiss</h3>
+                    <h3 class="text-xl">Interface (interfeiss)</h3>
                     <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
                         <div class="w-50">
                             <img class="" src="@/assets/interface.png"></img>
@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="pl-5 border-b-1 border-t-1 pt-5">
-                    <h3 class="text-xl">Asociācijas saikne</h3>
+                    <h3 class="text-xl">Association relationship (asociācijas saikne)</h3>
                     <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
                         <div class="w-50">
                             <img class="" src="@/assets/relationship-association.png"></img>
@@ -69,7 +69,7 @@
                 </div>
 
                 <div class="pl-5 border-b-1 border-t-1 pt-5">
-                    <h3 class="text-xl">Saikne</h3>
+                    <h3 class="text-xl">Dependency relationship (saikne)</h3>
                     <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
                         <div class="w-50">
                             <img class="" src="@/assets/relationship-dependency.png"></img>
@@ -79,7 +79,7 @@
                 </div>
 
                 <div class="pl-5 border-b-1 border-t-1 pt-5">
-                    <h3 class="text-xl">Ports</h3>
+                    <h3 class="text-xl">Port (ports)</h3>
                     <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
                         <div class="w-30">
                             <img class="" src="@/assets/port.png"></img>
@@ -91,7 +91,7 @@
                 </div>
 
                 <div class="pl-5 border-b-1 border-t-1 pt-5">
-                    <h3 class="text-xl">Mezgls</h3>
+                    <h3 class="text-xl">Node (mezgls)</h3>
                     <div class="flex gap-5 mb-3 mt-5  justify-start items-start" :class="smallScreen ? 'flex-wrap items-center justify-center' : ''">
                         <div class="w-150">
                             <img class="" src="@/assets/node.png"></img>

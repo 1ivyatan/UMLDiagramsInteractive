@@ -3,7 +3,15 @@ import { ref, computed, watch } from "vue";
 
 const questions = ref([
   { type: 'choice', text: "Interfeisā ko nozīmē pusapļi?", options: ["Komponentes nepieciešamais interfeiss darbībai", "Komponentes interfeiss izmantošanai citās komponentēs"], correct: 0 },
-   { type: 'choice', text: "Video koplietošanas vietnē kas varētu būt video straumētājs?", options: ["Interfeiss", "Ports", "Komponente"], correct: 2 }
+   { type: 'choice', text: "Video koplietošanas vietnē kas varētu būt video straumētājs?", options: ["Interfeiss", "Ports", "Komponente"], correct: 2 },
+   { type: 'choice', text: "Vai datu bāzes vaicājums var būt komponente diagrammā?", options: ["Jā", "Vispārīgi nē", "Nē, taču var būt citāds diagrammā"], correct: 2 },
+   { type: 'choice', text: "Ja datu bāzes vaicājums nevar būt par komponenti, kas tad varētu būt diagrammā?", options: ["Interfeiss", "Artifakts", "Interfeiss"], correct: 1},
+   { type: 'choice', text: "Komponentes, artifakti un mezgli ir attēloti kā konteineri, kuriem ir simbols augšējā labā stūŗī?", options: ["Komponentei", "Artifaktam", "Interfeisam"], correct: 0},
+   { type: 'choice', text: "Kā arī atšķir komponentes no artifaktiem?", options: ["Ar simbolu stūŗī", "Tās nosaukums pēdiņās", "Kontūras spilgtums"], correct: 1},
+   { type: 'choice', text: "Spēlei plānots veidot serveŗa ietvaru daudzspēlētāju sesijām. Sadaļas ir šādas: serveris, autentifikācija, spēles laukums, kartes fails, tīklotājs. Kādus pierakstus diagrammā tiks izmantoti attiecīgām sadaļām?", options: ["Artifakts, komponente, artifakts, komponente", "Mezgls, komponente, komponente, komponente", "Mezgls, komponente, artifakts, komponente",  "Mezgls, komponente, artifakts, komponente"  ], correct: 2},
+   { type: 'choice', text: "Pēc izstrādes ir kompilēts spēles serveris, kas tā ir diagrammā?", options: ["Komponente", "Mezgls", "Artifakts"], correct: 1},
+   { type: 'choice', text: "Vai diagramās vienmēr jāattēlo komponenti, kurā iekšā ir komponentes?", options: ["Jā", "Nē"], correct: 1},
+   { type: 'choice', text: "Ko norādītu interfeisa riņķis kodā?", options: ["interface", "export"," attacher"], correct: 0},
 ]);
 
 const currentIndex = ref(0);
