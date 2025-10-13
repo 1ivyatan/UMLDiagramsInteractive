@@ -161,7 +161,7 @@ watch(currentIndex, (newIndex) => {
         <div v-for="(opt, oi) in questions[currentIndex].options" :key="oi" class="mb-2">
           <button
             @click="answerChoice(oi)"
-            class="px-4 py-2 rounded w-full text-left transition-colors duration-300"
+            class="px-4 py-2 rounded w-full text-left transition-colors duration-300 cursor-pointer"
             :disabled="selected !== null"
             :class="[
               selected === oi
@@ -251,7 +251,7 @@ watch(currentIndex, (newIndex) => {
       <h3 class="text-xl font-bold">Tests pabeigts!</h3>
       <p class="mt-1 text-red-700 font-semibold">Nepareizās atbildes: {{ wrongCount }}</p>
       <p class="mt-2">Kopā jautājumi: {{ questions.length }}</p>
-      <button @click="restartQuiz" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded w-full md:w-auto">Mēģināt vēlreiz</button>
     </div>
+    <button @click="restartQuiz" class="mt-2 bg-blue-600 mt-10 text-white px-4 py-2 rounded cursor-pointer">Reset</button>
   </div>
 </template>

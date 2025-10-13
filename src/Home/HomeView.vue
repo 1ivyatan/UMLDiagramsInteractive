@@ -8,8 +8,14 @@
 
 <script setup>
 import GuestLayout from '@/Layouts/GuestLayout.vue';
+import { onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 
+onMounted(() => {
+    router.push('/sequence');
+});
 
 
 </script>
