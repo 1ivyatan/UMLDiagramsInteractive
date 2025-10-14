@@ -1,8 +1,7 @@
 <template>
     <div class="w-full p-5 h-auto flex items-center justify-between shadow-md">
         <div class="flex items-center gap-3">
-            <FileChartColumnIncreasing></FileChartColumnIncreasing>
-            <RouterLink to="/" v-if="!smallScreen">UML Diagramas</RouterLink>
+            <RouterLink to="/" v-if="!smallScreen" class="flex gap-2"><FileChartColumnIncreasing></FileChartColumnIncreasing> UML Diagramas</RouterLink>
         </div>
         <div class="flex items-center gap-5">
             <RouterLink active-class="border-b-1" to="/components" class="ml-5">Komponenšu UML</RouterLink>
